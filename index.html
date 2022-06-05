@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1> apple race </h1>
+
+        <div>
+            <h2>is it a winning instance?</h2>
+
+            <div class="btn" >
+                <span onclick="getInstance()"> find out</span>
+
+                <span id="result" style="display:none; cursor: initial;"> </span>
+            </div>
+        </div>
+        <div id="show-selected">
+        </div>
+        <div style="display: none;" id="choose-apple">
+            <h2>pick your apple</h2>
+            <svg viewBox="-80 -10 173 61">
+                <circle r="5" cx="0" cy="0" fill="purple" id="purple" class="pick-apple purple" onclick="clickHanlder(event)"
+                    style="cursor: pointer" />
+                <circle r="5" cx="10" cy="0" fill="red" id="red" class="pick-apple red" onclick="clickHanlder(event)"
+                    style="cursor: pointer" />
+                <circle r="5" cx="20" cy="0" fill="blue" id="blue" class="pick-apple blue" onclick="clickHanlder(event)"
+                    style="cursor: pointer" />
+            </svg>
+
+            <div id="start" class="btn" onclick="animateApples()">
+                <span> start </span>
+            </div>
+        </div>
+        <div style="display: none" id="race">
+
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 612 792"
+                style="enable-background:new 0 0 612 792;" xml:space="preserve">
+                <style type="text/css">
+                    .infinity {
+                        fill: #FFFFFF;
+                        stroke: #000000;
+                        stroke-miterlimit: 10;
+                    }
+                </style>
+                <path class="infinity"
+                    d="M111.2,212.9c56-112,16-147,133-137s166,10,188,30s52,76,63,98s37,69,40,97s16,48-6,86c-22,38-21,74-64,60
+	s-54-24-64-53s-12-61-43-72s-49-18-81-5s-57,10-53,46s90,80,90,80s59,10,84,24s41,9,52,26s14,15,13,41s2,24-8,46s-14,35-48,55
+	s-49.5,22-80.7,19s-50.3-4-64.3-6s-13,1-12-37s8-39,3-77s35-51-17-61s-82-49-95,28s2,126-30,112s-49,23-37-34s-15-20,25-101
+	s103-203,150-217s79-30,103-40s48-19,30-44s-4-45-58-36s-70,4-104,35s-34,27-64,67s-38,62-52,56S111.2,212.9,111.2,212.9z" />
+                <circle r="15" cx="0" cy="10" fill="purple" class="circle purple" id="purple" />
+                <circle r="15" cx="50" cy="20" fill="red" class="circle red" id="red" />
+                <circle r="15" cx="100" cy="30" fill="blue" class="circle blue" id="blue" />
+            </svg>
+
+            <div id="winner-section" style="display: none;">
+                <h2>
+                    you're a winner omg
+
+                </h2>
+                <span class="btn" onclick="location.reload()"/> play again </span>
+
+            </div>
+            <div id="loser-section"  style="display: none">
+                <h2>
+                    you're a loser buu
+                </h2>
+                <span class="btn" onclick="location.reload()"/> play again </span>
+
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="main.js">
+    </script>
+</body>
+
+</html>
